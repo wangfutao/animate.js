@@ -1,12 +1,13 @@
 # Animate.js
 
-**三维函数动画 · 特性**
+**三维缓动函数动画 · 特性**
 - 支持给任意HTML元素添加动画
 - 支持给一个动画添加多个规则
 - 支持自定义缓动函数（缓动函数参考[https://easings.net](https://easings.net)）
 - 默认使用requestAnimationFrame来执行动画，同时支持使用CSS的@keyframes来执行动画
 - CSS的@keyframes使用transform: matrix3d()来执行，不被js主线程的阻塞
 - 支持导出所有的动画关键帧，可用于canvas、WebGL中的对象做矩阵变换
+- 后续加入对vue、react的支持
 
 ----
 
