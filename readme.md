@@ -47,13 +47,23 @@
   //step4: 执行动画，持续1000ms
   animate.run(div, 1000);
 ```
-### **3. 动画规则解释**
+### **3. 动画规则参数解释**
 ``` js
-easingFunction: 缓动曲线名称
-type: 动画类型，平移translate，旋转rotate，缩放scale
-direction: 方向，当type为translate时，direction为平移的方向，比如'x'为沿着x轴平移
+easingFunction: 缓动曲线名称，参考下图
+type: 动画类型
+  - 平移translate
+  - 旋转rotate
+  - 缩放scale
+direction: 方向，支持x、y、z
+  - 当type为translate时，表示平移的方向，必选x、y、z
+  - 当type为rotate时，表示旋转轴，可选x、y或z，不传默认为z，表示绕z轴旋转
+  - 当type为scale时，表示缩放的方向，可选x、y或z，不传默认为x+y+z，表示x、y、z三个方向同时缩放，目前只支持单选
 from: 动画的起点
+  - 当type为translate时，单位为px，元素初始状态为0，左负右正，上负下正
+  - 当type为rotate时，单位为弧度，元素初始状态为0，顺时针方向为正方向
+  - 当type为scale时，无单位，表示缩放比例，元素初始状态为1
 to: 动画的终点
+  -同from
 ```
 #### 更多的使用方法及示例请查看：<u>Docs(待更新)</u>
 
